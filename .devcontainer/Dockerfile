@@ -45,6 +45,9 @@ RUN cd /home/${USERNAME}/.local/bin \
         && mv OpenSCAD-2026.01.01.ai30333-x86_64.AppImage openscad \
         && chmod +x openscad
 
+# Install Atuin
+RUN curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh | sh
+
 USER root
 
 # needed for vhs to make movies

@@ -29,5 +29,8 @@ echo "Trying to limit SCAD ram usage..."
 mkdir -p ~/.config/OpenSCAD
 cp $DEVCONTAINER_DIR/OpenSCAD.conf ~/.config/OpenSCAD
 
+echo "Logging into Atuin (on first run you'll be prompted for your credentials)..."
+atuin status || atuin login -u geeksville
+
 #echo "Doing an initial build..."
 #make
